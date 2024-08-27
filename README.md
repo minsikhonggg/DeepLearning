@@ -1,0 +1,1 @@
+- https://github.com/WegraLee/deep-learning-from-scratch.git
