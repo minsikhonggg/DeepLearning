@@ -157,7 +157,11 @@ class Embedding:
     def forward(self, idx):
         W, = self.params
         self.idx = idx
-        out = W[idx]
+        if GPU:
+            # Using Cupy for GPU arrays
+            out = W.get()[idx]  # Get the data from GPU to CPU for further processing
+        else:
+            out = W[idx]  # Regular numpy operation
         return out
 
     def backward(self, dout):
