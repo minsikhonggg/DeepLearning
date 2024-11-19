@@ -1,1 +1,0 @@
- ndarray 인스턴스의 __add__메서드 호출 -> [variable([3.])]
